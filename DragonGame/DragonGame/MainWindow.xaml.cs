@@ -117,9 +117,7 @@ namespace DragonGame
 
         private void GetToFight_Click(object sender, RoutedEventArgs e)
         {
-            string location = "";
-            StartOfFight(); //Posílat data o lokaci boje
-            fight.IsSelected = true;
+            map.IsSelected = true;
         }
 
         private void ReturnGame_Click(object sender, RoutedEventArgs e)
@@ -563,7 +561,7 @@ namespace DragonGame
                 invis(UseMana);
                 invis(BattleHealPotion);
                 invis(BattleManaPotion);
-                StartOfFight();
+               // StartOfFight();
             }
         }
 
@@ -589,14 +587,9 @@ namespace DragonGame
         }
 
         //Funkce, kde nastavuji začínající zápas (kdo hráče vyzval, nastavuji gif v boji, aby byl přizpůsoben)
-        public void StartOfFight()
+        public void StartOfFight(string location)
         {
-            //Adresa monstra
-            List<string> monsters = new List<string>();
-            monsters.Add("Enemy_Dragon");
-            monsters.Add("Enemy_Giant");
-            monsters.Add("Enemy_Raid");
-            monsters.Add("Enemy_Hunter");
+            fight.IsSelected = true;
 
             //Bojový systém
             EnemyHP.Value = monster.HP;
@@ -606,39 +599,10 @@ namespace DragonGame
             PlayerMP.Maximum = player.MP;
             PlayerMP.Value = player.MP;
 
-            Random randomMonster = new Random();
-            int NewRandomMonster = randomMonster.Next(0, 3);
-
-            switch (NewRandomMonster)
-            {
-                case 0:
-                    ImageSource enSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Monsters/Enemy_Dragon.gif"));
-                    ImageBehavior.SetAnimatedSource(Monster, enSource);
-                    monster = new Monster("Enemy_Dragon");
-                    FightSystem(monster);
-                    break;
-
-                case 1:
-                    ImageSource enSource1 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Monsters/Enemy_Giant.gif"));
-                    ImageBehavior.SetAnimatedSource(Monster, enSource1);
-                    monster = new Monster("Enemy_Giant");
-                    FightSystem(monster);
-                    break;
-
-                case 2:
-                    ImageSource enSource2 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Monsters/Enemy_Raid.gif"));
-                    ImageBehavior.SetAnimatedSource(Monster, enSource2);
-                    monster = new Monster("Enemy_Raid");
-                    FightSystem(monster);
-                    break;
-
-                case 3:
-                    ImageSource enSource3 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Monsters/Enemy_Hunter.gif"));
-                    ImageBehavior.SetAnimatedSource(Monster, enSource3);
-                    monster = new Monster("Enemy_Hunter");
-                    FightSystem(monster);
-                    break;
-            }
+            monster = new Monster(location);
+            ImageSource enSource = new BitmapImage(new Uri(monster.Url));
+            ImageBehavior.SetAnimatedSource(Monster, enSource);
+            FightSystem(monster);
 
         }
 
@@ -1183,6 +1147,29 @@ if || (Canvas.GetLeft(PlayersCharacter) < 0)))
             game.IsSelected = true;
         }
 
+        private void Reach_Explore_Click(object sender, RoutedEventArgs e)
+        {
+            string location = "Reach";
+            StartOfFight(location); //Posílat data o lokaci boje
+        }
+
+        private void WhiteRun_Explore_Click(object sender, RoutedEventArgs e)
+        {
+            string location = "WhiteRun";
+            StartOfFight(location); //Posílat data o lokaci boje
+        }
+
+        private void WinterHold_Explore_Click(object sender, RoutedEventArgs e)
+        {
+            string location = "WinterHold";//Posílat data o lokaci boje
+            StartOfFight(location);
+        }
+
+        private void Rift_Explore_Click(object sender, RoutedEventArgs e)
+        {
+            string location = "Rift";
+            StartOfFight(location);
+        }
     }
 }
 

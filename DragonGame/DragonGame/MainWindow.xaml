@@ -124,6 +124,31 @@
                 </Grid.Background>
             </Grid>
         </TabItem>
+        <TabItem x:Name="map" Header="Mapa">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="151*"/>
+                    <ColumnDefinition Width="151*"/>
+                    <ColumnDefinition Width="151*"/>
+                    <ColumnDefinition Width="301*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="Reach_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="Reach_Explore_Click" />
+                <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" x:Name="WhiteRun_Explore" Content="Jít prozkoumat" Width="120" Margin="16,138,15,0" Click="WhiteRun_Explore_Click" />
+                <Button Grid.Column="3" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="Rift_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="Rift_Explore_Click" />
+                <Button Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WinterHold_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="WinterHold_Explore_Click"/>
+                <Grid.Background>
+                    <ImageBrush
+                        ImageSource="Pictures/Backgrounds/Fight_Map.jpg"
+                        Stretch="UniformToFill" />
+                </Grid.Background>
+
+            </Grid>
+        </TabItem>
         <TabItem x:Name="inv" Header="Inventář">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -145,7 +170,7 @@
                        gif:ImageBehavior.RepeatBehavior="Forever"/>
                 <Image x:Name="HealItem" Grid.Column="2" Grid.Row="0" Source="Pictures/Shop/Heal_Potion.png" />
                 <Image x:Name="ManaItem" Grid.Column="2" Grid.Row="1" Source="Pictures/Shop/Mana_Potion.png" />
-                <Label x:Name="HealItemNumber" Grid.Column="3" Grid.Row="0" Content="" VerticalAlignment="Center"/>                
+                <Label x:Name="HealItemNumber" Grid.Column="3" Grid.Row="0" Content="" VerticalAlignment="Center"/>
                 <Label x:Name="ManaItemNumber" Grid.Column="3" Grid.Row="1" Content="" VerticalAlignment="Center"/>
                 <Image gif:ImageBehavior.AnimatedSource="Pictures/Resources/Coin.gif"
                        x:Name="CoinPic"
@@ -229,7 +254,7 @@
                 <Image x:Name="BattleManaPotion" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Pictures/Shop/Mana_Potion.png" Width="180" Margin="187,30,10,28" />
                 <Button Grid.Column="1" Grid.Row="1" x:Name="UseHeal" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Height="28" Click="UseHeal_Click" Margin="57,0,0,0" />
                 <Button Grid.Column="1" Grid.Row="1" x:Name="UseMana" Content="" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Height="28" Click="UseMana_Click" Margin="206,0,51,0" />
-                
+
                 <Button Grid.Column="0" Grid.Row="1" x:Name="attack_1" Content="Základní útok" HorizontalAlignment="Left" VerticalAlignment="Center" Width="119" Height="28" Click="attack_1_Click"/>
                 <Button Grid.Column="0" Grid.Row="1" x:Name="attack_2" Content="Silný útok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="119" Height="28" Click="attack_2_Click"/>
                 <Button Grid.Column="0" Grid.Row="1" x:Name="attack_3" Content="Speciální útok" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="119" Height="28" Grid.ColumnSpan="2" Click="attack_3_Click"/>
