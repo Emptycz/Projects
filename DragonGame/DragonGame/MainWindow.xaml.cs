@@ -117,6 +117,12 @@ namespace DragonGame
 
         private void GetToFight_Click(object sender, RoutedEventArgs e)
         {
+            invis(Boss_Explore);
+            int player_lvl = player.Level_Check(player.XP);
+            if (player_lvl >= 10)
+            {
+                vis(Boss_Explore);
+            }
             map.IsSelected = true;
         }
 
@@ -514,6 +520,8 @@ namespace DragonGame
                 fight.IsEnabled = false;
                 result.IsEnabled = false;
                 shop.IsEnabled = false;
+                map.IsEnabled = false;
+                invis(map);
                 invis(shop);
                 invis(result);
                 invis(fight);
@@ -528,6 +536,8 @@ namespace DragonGame
                 menu.IsEnabled = false;
                 inv.IsEnabled = true;
                 result.IsEnabled = false;
+                map.IsEnabled = false;
+                invis(map);
                 invis(fight);
                 invis(result);
                 player.Level(player.XP);
@@ -535,6 +545,7 @@ namespace DragonGame
             }
             if (inv.IsSelected)
             {
+                map.IsEnabled = false;
                 inv.IsSelected = true;
                 fight.IsEnabled = false;
                 result.IsEnabled = false;
@@ -542,18 +553,22 @@ namespace DragonGame
                 fight.Visibility = Visibility.Hidden;
                 game.IsEnabled = true;
                 menu.IsEnabled = false;
+                invis(map);
                 OpenInvent();
 
             }
             if (lore.IsSelected)
             {
                 lore.IsSelected = true;
+                lore.IsEnabled = true;
                 fight.IsEnabled = false;
                 result.IsEnabled = false;
                 game.IsEnabled = true;
                 result.Visibility = Visibility.Hidden;
                 fight.Visibility = Visibility.Hidden;
                 menu.IsEnabled = false;
+                map.IsEnabled = false;
+                invis(map);
                 TellMeStory();
             }
             if (fight.IsSelected)
@@ -565,12 +580,21 @@ namespace DragonGame
                 lore.IsEnabled = false;
                 game.IsEnabled = false;
                 result.IsEnabled = false;
+                map.IsEnabled = false;
                 result.Visibility = Visibility.Hidden;
                 invis(UseHeal);
                 invis(UseMana);
                 invis(BattleHealPotion);
                 invis(BattleManaPotion);
+                invis(map);
                // StartOfFight();
+            }
+
+            if (map.IsSelected)
+            {
+                map.IsSelected = true;
+                invis(map);
+                invis(Boss_Explore);
             }
         }
 
@@ -1004,29 +1028,6 @@ namespace DragonGame
 
             e.Handled = true;
         }
-        /*
-int widthPL = (Convert.ToInt32(myAwesomeCanvas.ActualWidth));
-if || (Canvas.GetLeft(PlayersCharacter) < 0)))
-{
-    Canvas.SetLeft(element, left);
-}
-
-        Canvas.SetLeft(element, left);
-                Canvas.SetTop(element, top);
-
-                
-             herní plocha 200
-             šířka hráče 20
-
-            == max odražení od leva hráče 180 == herní plocha - šířka hráče
-
-            if(!(maximální pozice < pozice hráče + šířka hráče)){
-             
-                
-             */
-
-
-        //Inventář
 
         //Metody pro skrytí a odkrytí buttonů / inputů
         void invis(UIElement el)
@@ -1176,6 +1177,17 @@ if || (Canvas.GetLeft(PlayersCharacter) < 0)))
         private void Rift_Explore_Click(object sender, RoutedEventArgs e)
         {
             string location = "Rift";
+            StartOfFight(location);
+        }
+
+        private void Map_Back_Click(object sender, RoutedEventArgs e)
+        {
+            game.IsSelected = true;
+        }
+
+        private void Boss_Explore_Click(object sender, RoutedEventArgs e)
+        {
+            string location = "Boss";
             StartOfFight(location);
         }
     }
