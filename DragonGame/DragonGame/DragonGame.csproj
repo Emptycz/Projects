@@ -131,7 +131,9 @@
   <ItemGroup>
     <Resource Include="Pictures\Achievments\Achievment_1.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\Monsters\Enemy_Bear.gif" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Monsters\Enemy_Hunter.gif" />
   </ItemGroup>
@@ -207,6 +209,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Backgrounds\Fight_map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Monsters\Enemy_Crows.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Mage.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Pirate.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Scorpion.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Snowman.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Wolf.gif" />
+    <Resource Include="Pictures\Monsters\Enemy_Wyvern.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Monsters\Enemy_Snake.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

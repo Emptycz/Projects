@@ -26,8 +26,8 @@ namespace DragonGame
 
         public Monster(string location)
         {
-           
 
+            _location = location;
             switch (_location)
             {
                 case "Rift":
@@ -78,15 +78,15 @@ namespace DragonGame
                     }
                     else if (monster2 == 2)
                     {
-                        _monster4 = "Enemy_Hunter";
+                        _monster2 = "Enemy_Hunter";
                     }
                     else if (monster2 == 3)
                     {
-                        _monster4 = "Snowman";
+                        _monster2 = "Snowman";
                     }
                     else if (monster2 == 4)
                     {
-                        _monster4 = "Crows";
+                        _monster2 = "Crows";
                     }
                     break;
 
@@ -144,19 +144,18 @@ namespace DragonGame
                         _monster4 = "Enemy_Raid";
                     }
                     break;
-
             }
 
-            if(location == "Rift")
+            if(_location == "Rift")
             {
                 _name = _monster1;
-            }else if(location == "WhiteRun")
+            }else if(_location == "WhiteRun")
             {
                 _name = _monster2;
-            }else if(location == "Reach")
+            }else if(_location == "Reach")
             {
                 _name = _monster3;
-            }else if(location == "WinterHold")
+            }else if(_location == "WinterHold")
             {
                 _name = _monster4;
             }
@@ -168,6 +167,15 @@ namespace DragonGame
                     _mp = 1000;
                     _armor = 10;
                     _damage = 100;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wyvern.gif";
+                    break;
+
+                case "Snake":
+                    _hp = 200;
+                    _mp = 100;
+                    _armor = 2;
+                    _damage = 45;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Snake.gif";
                     break;
 
                 case "Scorpion":
@@ -175,6 +183,7 @@ namespace DragonGame
                     _mp = 50;
                     _armor = 2;
                     _damage = 20;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Scorpion.gif";
                     break;
 
                 case "Snowman":
@@ -182,6 +191,7 @@ namespace DragonGame
                     _mp = 1000;
                     _armor = 1;
                     _damage = 5;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Snowman.gif";
                     break;
 
                 case "Crows":
@@ -189,6 +199,7 @@ namespace DragonGame
                     _mp = 50;
                     _armor = 1;
                     _damage = 30;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Crows.gif";
                     break;
 
                 case "Bear":
@@ -196,6 +207,7 @@ namespace DragonGame
                     _mp = 200;
                     _armor = 3;
                     _damage = 60;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";
                     break;
 
                 case "White_Bear":
@@ -203,6 +215,7 @@ namespace DragonGame
                     _mp = 300;
                     _armor = 5;
                     _damage = 65;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";
                     break;
 
                 case "Enemy_Mage":
@@ -210,6 +223,7 @@ namespace DragonGame
                     _mp = 800;
                     _armor = 3;
                     _damage = 50;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Mage.gif";
                     break;
 
                 case "Pirate":
@@ -217,6 +231,7 @@ namespace DragonGame
                     _mp = 600;
                     _armor = 4;
                     _damage = 80;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Pirate.gif";
                     break;
 
                 case "Fox":
@@ -224,6 +239,7 @@ namespace DragonGame
                     _mp = 150;
                     _armor = 2;
                     _damage = 55;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif";
                     break;
 
                 case "White_Fox":
@@ -231,6 +247,7 @@ namespace DragonGame
                     _mp = 250;
                     _armor = 3;
                     _damage = 65;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif";
                     break; 
 
                 case "Enemy_Dragon":
@@ -246,6 +263,7 @@ namespace DragonGame
                     _mp = 200;
                     _armor = 4;
                     _damage = 20;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Giant.gif";
                     break;
 
                 case "Enemy_Hunter":
@@ -253,6 +271,7 @@ namespace DragonGame
                     _mp = 200;
                     _armor = 2;
                     _damage = 10;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Hunter.gif";
                     break;
 
                 case "Enemy_Raid":
@@ -260,6 +279,7 @@ namespace DragonGame
                     _mp = 500;
                     _armor = 3;
                     _damage = 60;
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Raid.gif";
                     break;
             }
         }

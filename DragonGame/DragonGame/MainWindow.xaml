@@ -138,7 +138,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="Reach_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="Reach_Explore_Click" />
-                <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" x:Name="WhiteRun_Explore" Content="Jít prozkoumat" Width="120" Margin="16,138,15,0" Click="WhiteRun_Explore_Click" />
+                <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WhiteRun_Explore" Content="Jít prozkoumat" Width="120" Margin="16,138,15,0" Click="WhiteRun_Explore_Click" />
                 <Button Grid.Column="3" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="Rift_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="Rift_Explore_Click" />
                 <Button Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="WinterHold_Explore" Content="Jít prozkoumat" Width="120" Height="20" Click="WinterHold_Explore_Click"/>
                 <Grid.Background>

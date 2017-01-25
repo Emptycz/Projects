@@ -349,6 +349,15 @@ namespace DragonGame
             invis(BoyFromMenu);
             CharacterSelection();
             vis(BackToPreviousPage);
+            ImageSource NO1 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Characters/Mage_Girl.gif"));
+            ImageBehavior.SetAnimatedSource(NO1Champ, NO1);
+            ImageSource NO2 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Characters/Hunter_Girl.gif"));
+            ImageBehavior.SetAnimatedSource(NO2Champ, NO2);
+            ImageSource NO3 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Characters/Warrior_Girl.png"));
+            ImageBehavior.SetAnimatedSource(NO3Champ, NO3);
+            ImageSource NO4 = new BitmapImage(new Uri("pack://application:,,,/Pictures/Characters/Devil_Girl.gif"));
+            ImageBehavior.SetAnimatedSource(NO4Champ, NO4);
+            vis(BackToPreviousPage);
         }
 
         private void ChooseBoy_Click(object sender, RoutedEventArgs e)
@@ -591,18 +600,20 @@ namespace DragonGame
         {
             fight.IsSelected = true;
 
+            monster = new Monster(location);
+            ImageSource enSource = new BitmapImage(new Uri(monster.Url));
+            ImageBehavior.SetAnimatedSource(Monster, enSource);
+
             //Bojový systém
-            EnemyHP.Value = monster.HP;
             EnemyHP.Maximum = monster.HP;
+            EnemyHP.Value = monster.HP;
             PlayerHP.Maximum = player.HP;
             PlayerHP.Value = player.HP;
             PlayerMP.Maximum = player.MP;
             PlayerMP.Value = player.MP;
 
-            monster = new Monster(location);
-            ImageSource enSource = new BitmapImage(new Uri(monster.Url));
-            ImageBehavior.SetAnimatedSource(Monster, enSource);
             FightSystem(monster);
+
 
         }
 
