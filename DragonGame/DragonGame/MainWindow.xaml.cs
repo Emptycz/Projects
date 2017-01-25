@@ -613,8 +613,6 @@ namespace DragonGame
             PlayerMP.Value = player.MP;
 
             FightSystem(monster);
-
-
         }
 
         //Přepnutí v boji do batohu (inventáře)
@@ -740,7 +738,7 @@ namespace DragonGame
             }
             List<string> LuckyShot = new List<string>(); //List, který udává v boji prvek náhody (jaký útok nepřítel použije)
             LuckyShot.Add("SpecialAttackMonster");
-            LuckyShot.Add("BassicAttackMonster");
+            LuckyShot.Add("SpecialAttackMonster");
             LuckyShot.Add("BassicAttackMonster");
             LuckyShot.Add("BassicAttackMonster");
             LuckyShot.Add("BassicAttackMonster");
@@ -1047,7 +1045,6 @@ if || (Canvas.GetLeft(PlayersCharacter) < 0)))
             string path = "save.txt";
             string createText = player.gender + Environment.NewLine + player.role + Environment.NewLine + player.XP + Environment.NewLine + player.HP + Environment.NewLine + player.MP + Environment.NewLine + player.Coin + Environment.NewLine + player.Heal + Environment.NewLine + player.Mana + Environment.NewLine + player.Cleared_Locations + Environment.NewLine + player.Won;
             File.WriteAllText(path, createText);
-
         }
 
         private void BackToPreviousPage_Click(object sender, RoutedEventArgs e)
