@@ -1,0 +1,265 @@
+﻿<Window x:Class="DragonGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:DragonGame"
+        mc:Ignorable="d"
+        Title="Slayers of Dragons"
+        WindowState="Maximized">
+    <TabControl SelectionChanged="MenuChanged">
+        <TabItem x:Name="menu" Header="Menu">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="414" Width="648" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <TextBlock Grid.Column="0" Grid.Row="0" x:Name="InformationTab" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Button Grid.Column="1" Grid.Row="0" x:Name="NewGame" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="194" Height="22" Click="NewGame_Click" />
+                <Button Grid.Column="1" Grid.Row="1" x:Name="LoadGame" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Width="194" Height="22" Click="LoadGame_Click"/>
+                <Button Grid.Column="1" Grid.Row="2" x:Name="ExitGame" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="194" Height="22" Click="ExitGame_Click"/>
+                <Button Grid.Column="0" Grid.Row="2" x:Name="ChooseGirl" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="161" Click="ChooseGirl_Click"/>
+                <Button Grid.Column="0" Grid.Row="2" x:Name="LoadCharacter" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="161" Click="LoadCharacter_Click"/>
+                <Button Grid.Column="2" Grid.Row="2" x:Name="ChooseBoy" Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="161" Click="ChooseBoy_Click"/>
+                <Button Grid.Column="0" Grid.Row="2" x:Name="NO1_Role" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="113" Height="22" Click="NO1_Role_Checked"/>
+                <Button Grid.Column="1" Grid.Row="2" x:Name="NO2_Role" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" Height="22" Click="NO2_Role_Checked"/>
+                <Button Grid.Column="1" Grid.Row="2" x:Name="NO3_Role" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="113" Height="22" Click="NO3_Role_Checked"/>
+                <Button Grid.Column="2" Grid.Row="2" x:Name="NO4_Role" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="113" Height="22" Click="NO4_Role_Checked"/>
+                <Button Grid.Column="2" Grid.Row="2" x:Name="BackToPreviousPage" Content="Zpět" Width="120" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BackToPreviousPage_Click"/>
+                <Image Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="GirlFromMenu"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Mage_Girl.gif"/>
+
+                <Image Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="BoyFromMenu"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Mage_Boy.png"/>
+
+                <Image Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="NO1Champ"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Mage_Girl.gif" />
+
+                <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="NO2Champ"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Hunter_Girl.gif" />
+
+                <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Warrior_Girl.png"
+                       x:Name="NO3Champ"
+                  />
+                <Image Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="NO4Champ"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Devil_Girl.gif"/>
+                <TextBlock Grid.Column="2" Grid.Row="1" x:Name="StatsLoad" Text="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="219" Width="196"/>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="game" Header="Hra">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="20" x:Name="SaveGame" Content="Uložit hru" Click="SaveGame_Click" />
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="20" x:Name="BuyItem" Content="Otevřít obchod" Click="BuyItem_Click" />
+                <Image Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="NPC_Quest"
+                       Width="120"
+                       gif:ImageBehavior.AnimatedSource="Pictures/NPC/Quester.gif"/>
+
+                <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="NPC_Smith"
+                       Width="180"
+                       gif:ImageBehavior.AnimatedSource="Pictures/NPC/smith.gif" />
+
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Resources/exit_game.gif"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="180" Grid.Column="4" Grid.Row="2" x:Name="ExitTheGameNPC"/>
+                <Button x:Name="EndGame" Grid.Column="4" Grid.Row="2" Content="Ukončit hru" Width="120" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ExitGame_Click" />
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/NPC/WeirdCharacter3.gif"
+                       x:Name="QuesterNPC"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       Width="160"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <Button x:Name="GetToFight" Grid.Column="2" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Content="" Width="120" Height="20" Click="GetToFight_Click" Margin="10,10,21,0"/>
+                <Canvas Grid.ColumnSpan="5" x:Name="myAwesomeCanvas">
+
+                    <Image gif:ImageBehavior.RepeatBehavior="Forever"
+                           x:Name="PlayersCharacter"
+                           Width="100"
+                           gif:ImageBehavior.AnimatedSource="Pictures/Characters/Hunter_Girl.gif" Canvas.Left="565" Canvas.Top="77" />
+
+                </Canvas>
+
+                <Grid.Background>
+                    <ImageBrush
+                        ImageSource="Pictures/test_background_d_game.png"
+                        Stretch="UniformToFill"
+                        />
+
+                </Grid.Background>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="inv" Header="Inventář">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="1" Grid.Row="2"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Hunter_Girl.gif"
+                       x:Name="InventoryCharacterPic"
+                       Width="500"
+                       gif:ImageBehavior.RepeatBehavior="Forever"/>
+                <Image x:Name="HealItem" Grid.Column="2" Grid.Row="0" Source="Pictures/Shop/Heal_Potion.png" />
+                <Image x:Name="ManaItem" Grid.Column="2" Grid.Row="1" Source="Pictures/Shop/Mana_Potion.png" />
+                <Label x:Name="HealItemNumber" Grid.Column="3" Grid.Row="0" Content="" VerticalAlignment="Center"/>                
+                <Label x:Name="ManaItemNumber" Grid.Column="3" Grid.Row="1" Content="" VerticalAlignment="Center"/>
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Resources/Coin.gif"
+                       x:Name="CoinPic"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       Grid.Column="2" Grid.Row="2"/>
+                <Label x:Name="AmmountOfGold" Grid.Column="3" Grid.Row="2" Content="" VerticalAlignment="Center" />
+                <TextBlock x:Name="PlayerStats" Grid.Column="1" Grid.Row="1" Text="" />
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="lore" Header="Děj">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="Lore1" TextWrapping="Wrap" Text="Kdysi dávno, na tomto světě žili společně s lidmi i stvoření, jejiž řev ničil celá města, jejich samotná přítomnost výřila vzduch... Někteří z nich, plyvali oheň, jiní led, další byli pokrytí zeminou a ti ostatní, byli třeba obklopeni větrem. Byli to draci, nepřátelé lidí. Občas se stalo, že se lidské dítě ztratilo v horách či lesích nebo skalách a narazilo na draka. Draci byli moudří a někteří i hodní, či láskyplní, tak některé děti vychovali... " Margin="127,10,127,0"/>
+                <TextBlock Grid.Row="0" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="Lore2" TextWrapping="Wrap" Text="Tento příběh, vypráví cestu jednoho z posledních hrdinů, kteří měli tu moc se bít i s těmito stvořeními, draky. Kdysi jich bývalo desítek, dnes bys je na jedné ruce spočítal... Jsou to právě děti, které draci vychovali a naučili je jejich způsobům života, včetně jejich mocné dřačí magie, říkalo se jim Drakobijci, navenek lidé, uvnitř draci, oplývající mocnou dračí magií, s kůží tvrdou jak dračí šupiny, živící se elementy... " Margin="127,10,127,0"/>
+                <TextBlock Grid.Row="0" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="Lore3" TextWrapping="Wrap" Text="Právě tito hrdinové, známi vedle velký mágů ochraňujících lidský svět, jsou povoláni, když se objeví drak, který ničí lidská obydlí a živí se nenávistí lidí. Drakobijecká magie je uznávána jakožto nejmocnější, pro příklad, Ohnivý drakobijec, pojídá oheň aby si obnovil ztracenou magickou energii, Ocelový drakobijec pojídá lidmi vyrebenou ocel a tak dále. Právě proto, že jsou zevnitř zocelení draky, mohou používat jejich magii i styl přežívání, toto jsou nejmocnější mágové tohoto světa... Drakobijci!" Margin="127,10,127,0"/>
+                <TextBlock Grid.Row="0" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="Lore4" TextWrapping="Wrap" Text="Avšak jendoho dne, draci zmizeli, bylo to sedmého července roku 777. Od té doby, drakobijci chodí po světě a hledají draky, kteří bez jediného slova zmizeli ze světa..." Margin="127,10,127,0"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="NextLore2" Grid.Row="0" Content="Další" Click="NextLore2_Click"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="NextLore3" Grid.Row="0" Content="Další" Click="NextLore3_Click"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="NextLore4" Grid.Row="0" Content="Další" Click="NextLore4_Click"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="ToGameButton" Grid.Row="0" Content="Do hry" Click="ToGameButton_Click"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="BackLore3" Grid.Row="0" Content="Zpět" Click="BackLore3_Click" Margin="0,0,127,0"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="BackLore2" Grid.Row="0" Content="Zpět" Click="BackLore2_Click" Margin="0,0,127,0"/>
+                <Button Width="120" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="BackLore1" Grid.Row="0" Content="Zpět" Click="BackLore1_Click" Margin="0,0,127,0"/>
+
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Lore/Lore3.gif"
+                       Grid.Row="1"
+                       x:Name="LoreGif1"
+                       gif:ImageBehavior.RepeatBehavior="1x"/>
+
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Lore/Lore2.gif"
+                       Grid.Row="1"
+                       x:Name="LoreGif2"
+                       gif:ImageBehavior.RepeatBehavior="1x"/>
+
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Lore/Lore4.gif"
+                       Grid.Row="1"
+                       x:Name="LoreGif3"
+                       gif:ImageBehavior.RepeatBehavior="1x"/>
+
+                <Image gif:ImageBehavior.AnimatedSource="Pictures/Lore/Lore1.gif"
+                       Grid.Row="1"
+                       x:Name="LoreGif4"
+                       gif:ImageBehavior.RepeatBehavior="1x"/>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="fight" Header="Boj">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="Player"
+                       Width="150"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Characters/Hunter_Girl.gif"/>
+
+                <Image Grid.Column="1" Grid.Row="0"
+                       gif:ImageBehavior.RepeatBehavior="Forever"
+                       x:Name="Monster"
+                       Width="450"
+                       gif:ImageBehavior.AnimatedSource="Pictures/Monsters/Enemy_Dragon.gif" />
+
+                <ProgressBar Grid.Column="1" Grid.Row="1" x:Name="EnemyHP" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="310"/>
+                <ProgressBar Grid.Column="0" Grid.Row="1" x:Name="PlayerHP" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="296" />
+                <ProgressBar Grid.Column="0" Grid.Row="1" Foreground="Blue" x:Name="PlayerMP" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="296" Margin="40,25,41,0" />
+                <Button Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="attack" Content="Útok" Width="119" Height="28" Click="attack_Click" Margin="0,105"/>
+                <Button Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="invent" Content="Batoh" Width="119" Height="28" Click="Invent_Click" />
+                <Image x:Name="BattleHealPotion" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Source="Pictures/Shop/Heal_Potion.png" Width="180" Margin="33,30,0,28"/>
+                <Image x:Name="BattleManaPotion" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Pictures/Shop/Mana_Potion.png" Width="180" Margin="187,30,10,28" />
+                <Button Grid.Column="1" Grid.Row="1" x:Name="UseHeal" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="120" Height="28" Click="UseHeal_Click" Margin="57,0,0,0" />
+                <Button Grid.Column="1" Grid.Row="1" x:Name="UseMana" Content="" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Height="28" Click="UseMana_Click" Margin="206,0,51,0" />
+                
+                <Button Grid.Column="0" Grid.Row="1" x:Name="attack_1" Content="Základní útok" HorizontalAlignment="Left" VerticalAlignment="Center" Width="119" Height="28" Click="attack_1_Click"/>
+                <Button Grid.Column="0" Grid.Row="1" x:Name="attack_2" Content="Silný útok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="119" Height="28" Click="attack_2_Click"/>
+                <Button Grid.Column="0" Grid.Row="1" x:Name="attack_3" Content="Speciální útok" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="119" Height="28" Grid.ColumnSpan="2" Click="attack_3_Click"/>
+                <Button Grid.Column="0" Grid.Row="1" x:Name="attack_back" Content="Zpět" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="119" Height="28" Click="attack_back_Click"/>
+
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="result" Header="Výsledek boje">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0" Width="744">
+                <Label x:Name="result_fight" Content="Label" Height="100" Margin="107,72,125,300"/>
+                <Button x:Name="ConfirmMyResult" Content="Button" HorizontalAlignment="Left" Margin="333,282,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmMyResult_Click"/>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="shop" Header="Obchod">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" x:Name="HealPotion" Source="Pictures/Shop/Heal_Potion.png" />
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Koupit 1x" Width="140" Height="20" x:Name="ManaPotionBuy" Click="BuyMana_Click"/>
+                <Image Grid.Column="1" Grid.Row="0" x:Name="ManaPotion" Source="Pictures/Shop/Mana_Potion.png" />
+                <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Koupit 1x" Width="140" Height="20" x:Name="HealPotionBuy" Click="BuyHeal_Click"/>
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="center" Content="Zpět do hry" Width="100" Height="20" x:Name="ReturnToGame" Click="ReturnGame_Click" />
+                <Label Width="120" x:Name="Gold" Content="Label" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
