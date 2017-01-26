@@ -166,7 +166,7 @@ namespace DragonGame
                     _hp = 1000;
                     _mp = 1000;
                     _armor = 10;
-                    _damage = 100;
+                    _damage = 600;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wyvern.gif";
                     break;
 
@@ -174,7 +174,7 @@ namespace DragonGame
                     _hp = 200;
                     _mp = 100;
                     _armor = 2;
-                    _damage = 45;
+                    _damage = 150;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Snake.gif";
                     break;
 
@@ -182,7 +182,7 @@ namespace DragonGame
                     _hp = 150;
                     _mp = 50;
                     _armor = 2;
-                    _damage = 20;
+                    _damage = 200;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Scorpion.gif";
                     break;
 
@@ -190,7 +190,7 @@ namespace DragonGame
                     _hp = 100;
                     _mp = 1000;
                     _armor = 1;
-                    _damage = 5;
+                    _damage = 80;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Snowman.gif";
                     break;
 
@@ -198,7 +198,7 @@ namespace DragonGame
                     _hp = 200;
                     _mp = 50;
                     _armor = 1;
-                    _damage = 30;
+                    _damage = 230;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Crows.gif";
                     break;
 
@@ -206,7 +206,7 @@ namespace DragonGame
                     _hp = 400;
                     _mp = 200;
                     _armor = 3;
-                    _damage = 60;
+                    _damage = 420;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";
                     break;
 
@@ -214,7 +214,7 @@ namespace DragonGame
                     _hp = 500;
                     _mp = 300;
                     _armor = 5;
-                    _damage = 65;
+                    _damage = 230;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";
                     break;
 
@@ -222,7 +222,7 @@ namespace DragonGame
                     _hp = 500;
                     _mp = 800;
                     _armor = 3;
-                    _damage = 50;
+                    _damage = 400;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Mage.gif";
                     break;
 
@@ -230,7 +230,7 @@ namespace DragonGame
                     _hp = 650;
                     _mp = 600;
                     _armor = 4;
-                    _damage = 80;
+                    _damage = 320;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Pirate.gif";
                     break;
 
@@ -238,7 +238,7 @@ namespace DragonGame
                     _hp = 200;
                     _mp = 150;
                     _armor = 2;
-                    _damage = 55;
+                    _damage = 160;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif";
                     break;
 
@@ -246,7 +246,7 @@ namespace DragonGame
                     _hp = 300;
                     _mp = 250;
                     _armor = 3;
-                    _damage = 65;
+                    _damage = 260;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif";
                     break; 
 
@@ -254,7 +254,7 @@ namespace DragonGame
                     _hp = 1000;
                     _mp = 1000;
                     _armor = 5;
-                    _damage = 100;
+                    _damage = 1000;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Dragon.gif";
                     break;
 
@@ -262,7 +262,7 @@ namespace DragonGame
                     _hp = 600;
                     _mp = 200;
                     _armor = 4;
-                    _damage = 20;
+                    _damage = 150;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Giant.gif";
                     break;
 
@@ -270,7 +270,7 @@ namespace DragonGame
                     _hp = 200;
                     _mp = 200;
                     _armor = 2;
-                    _damage = 10;
+                    _damage = 300;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Hunter.gif";
                     break;
 
@@ -278,7 +278,7 @@ namespace DragonGame
                     _hp = 750;
                     _mp = 500;
                     _armor = 3;
-                    _damage = 60;
+                    _damage = 600;
                     _url = "pack://application:,,,/Pictures/Monsters/Enemy_Raid.gif";
                     break;
             }
