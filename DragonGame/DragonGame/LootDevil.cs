@@ -14,9 +14,9 @@ namespace DragonGame
 
         public string generateLoot()
         {
-            firstLootDevil.Add("Čepele");
-            firstLootDevil.Add("Oblek");
-            firstLootDevil.Add("Boty");
+            firstLootDevil.Add("Čepele ");
+            firstLootDevil.Add("Oblek ");
+            firstLootDevil.Add("Boty ");
             Random l3 = new Random();
             int loot_type = l3.Next(0, 2);
 

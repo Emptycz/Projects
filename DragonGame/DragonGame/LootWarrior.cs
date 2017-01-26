@@ -14,12 +14,12 @@ namespace DragonGame
 
         public string generateLoot()
         {
-            firstLootWarrior.Add("Helma");
-            firstLootWarrior.Add("Kyrys");
-            firstLootWarrior.Add("Nohavice");
-            firstLootWarrior.Add("Boty");
-            firstLootWarrior.Add("Štít");
-            firstLootWarrior.Add("Meč");
+            firstLootWarrior.Add("Helma ");
+            firstLootWarrior.Add("Kyrys ");
+            firstLootWarrior.Add("Nohavice ");
+            firstLootWarrior.Add("Boty ");
+            firstLootWarrior.Add("Štít ");
+            firstLootWarrior.Add("Meč ");
             Random l7 = new Random();
             int loot_type = l7.Next(0, 5);
 

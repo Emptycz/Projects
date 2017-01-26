@@ -14,11 +14,11 @@ namespace DragonGame
 
         public string generateLoot()
         {
-            firstLootMage.Add("Hůl");
-            firstLootMage.Add("Klobouk");
-            firstLootMage.Add("Rukavice");
-            firstLootMage.Add("Hábit");
-            firstLootMage.Add("Boty");
+            firstLootMage.Add("Hůl ");
+            firstLootMage.Add("Klobouk ");
+            firstLootMage.Add("Rukavice ");
+            firstLootMage.Add("Hábit ");
+            firstLootMage.Add("Boty ");
             Random l1 = new Random();
             int loot_type = l1.Next(0, 4);
 
@@ -31,7 +31,7 @@ namespace DragonGame
             int loot_name = l2.Next(0, 4);
 
             lgenerateLoot.Add(new Loot(firstLootMage[loot_type], secondLootMage[loot_name], 1));
-            string newLoot = firstLootMage[loot_type] + " " + secondLootMage[loot_name];
+            string newLoot = firstLootMage[loot_type] + secondLootMage[loot_name];
             return newLoot;
         }
     }

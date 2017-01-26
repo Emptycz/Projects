@@ -26,11 +26,12 @@ namespace DragonGame
 
         public Monster(string location)
         {
-
+            
             _location = location;
             switch (_location)
             {
                 case "Rift":
+                    ILocation sss = new Rift(location);
                     WhatMonsterAtRift.Add("Scorpion");
                     WhatMonsterAtRift.Add("Snake");
                     WhatMonsterAtRift.Add("Fox");

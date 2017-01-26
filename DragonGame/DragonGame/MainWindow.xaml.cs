@@ -78,10 +78,7 @@ namespace DragonGame
                 Gold.Content = "Aktuálně máte: " + player.Coin + " coinů!";
 
             }
-            /*
-            string ManaItemCounter = ManaItemNumber.Content.ToString();
-            int ManaItemCounterInt = Int32.Parse(ManaItemCounter);
-            ManaItemNumber.Content = ManaItemCounterInt++;*/
+            
         }
         //Obchod
         private void BuyHeal_Click(object sender, RoutedEventArgs e)
@@ -96,13 +93,14 @@ namespace DragonGame
                 player.Heal += 1;
                 Gold.Content = "Aktuálně máte: " + player.Coin + " coinů!";
 
-            }
-
-           
+            }           
         }
 
         private void OpenInvent()
         {
+            //Připravení spritu
+            
+            //
             player.Level(player.XP);
             vis(HealItemNumber);
             vis(ManaItemNumber);
@@ -111,6 +109,10 @@ namespace DragonGame
             ManaItemNumber.Content = "Vlastníte " + player.Mana + " lektvarů doplňujících 100 many";
             AmmountOfGold.Content = "Právě máte " + player.Coin + " c!";
             PlayerStats.Text = "Pohlaví: " + player.gender + Environment.NewLine + "Role: " + player.role + Environment.NewLine + "XP: " + player.XP + Environment.NewLine + "HP: " + player.HP + Environment.NewLine + "MP: " + player.MP + Environment.NewLine + "Útočná síla: " + player.AttackDamage + Environment.NewLine + "Level: " + player.Level_Check(player.XP);
+            IInvent check_armor = new InventArmor();
+            int checked_armor = check_armor.CalculateArmor(player);
+
+
         }
         
         

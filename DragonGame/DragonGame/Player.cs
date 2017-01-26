@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace DragonGame
 {
@@ -114,6 +123,14 @@ namespace DragonGame
             _mana = mana;
             _cleared_locations = cleared_locations;
             _won = won;
+
+         /*ImageBrush weaponBrush = new ImageBrush();//založení
+           weaponBrush.ViewboxUnits = BrushMappingMode.Absolute; //nastvení
+           weaponBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/items/items2.png")); //zdroj spritu
+           my_Rectangle.Fill = weaponBrush; //změní brush
+           // new Rect(left,top,width,height)
+           weaponBrush.Viewbox = new System.Windows.Rect(0,0,20,20); // nastaví pozici ve spritu
+           */
 
             switch (Role)
             {
