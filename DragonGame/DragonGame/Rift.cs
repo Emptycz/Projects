@@ -77,7 +77,7 @@ namespace DragonGame
                     _mp = 200;
                     _armor = 3;
                     _damage = 420;
-                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Bear.gif";//
                     break;
 
                 case "Fox":
