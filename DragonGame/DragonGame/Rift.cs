@@ -85,7 +85,7 @@ namespace DragonGame
                     _mp = 150;
                     _armor = 2;
                     _damage = 160;
-                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif";
+                    _url = "pack://application:,,,/Pictures/Monsters/Enemy_Wolf.gif"; 
                     break;
             }
         }
