@@ -32,6 +32,13 @@ namespace DragonGame
         public int EnemysDMG;
         public string ChooseDamage;
         public bool InventClicker;
+        public int active_HeadItem;
+        public int active_BodyItem;
+        public int active_LeftItem;
+        public int active_RightItem;
+        public int active_TrousersItem;
+        public int active_BootsItem;
+        public List<int> Item_ID = new List<int>(); 
         public int page; //Snažím se o jakýsi identifikátor, podle kterého díky jedinému tlačítku se budu vracet na různé stránky (stavy) -> Experiment
         public MainWindow()
         {
@@ -632,11 +639,11 @@ namespace DragonGame
             ImageBehavior.SetAnimatedSource(Monster, enSource);
 
             //Zkontrolování armoru a výbavy samotného hráče
-            int additional_Armor = 0;
+            active_HeadItem = 4;
+            Item_ID.Add(active_HeadItem);
             //int additioanl_body = additional_stats.ActiveBodyItem();
-            player.Advanced_Armory(additional_Armor); //Domyslet propojení inventáře (aktivní výbavy!) --------------------- !!!!!!
+            player.Advanced_Armory(Item_ID); //Domyslet propojení inventáře (aktivní výbavy!) --------------------- !!!!!!
 
-            
             //Bojový systém
             EnemyHP.Maximum = monster.HP;
             EnemyHP.Value = monster.HP;

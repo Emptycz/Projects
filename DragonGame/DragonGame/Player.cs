@@ -222,7 +222,7 @@ namespace DragonGame
             return _level;
         }
 
-        public int Advanced_Armory(int Armor)
+        public int Advanced_Armory(List<int> Item_ID)
         {
             if(Armor <= 0)
             {

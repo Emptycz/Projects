@@ -62,13 +62,10 @@ namespace EvidenceOsob
             int month = int.Parse(strnbr.Substring(2, 2));
             int day = int.Parse(strnbr.Substring(4, 2));
 
-            //construct the date of birth
             DateTime dateOfBirth = new DateTime(year, month, day);
 
-            //Difference between date of birth and today in days
             int daysOld = (DateTime.Today - dateOfBirth).Days;
-
-            //if you want whole years
+            
             DateTime slidingDate = dateOfBirth;
             while (slidingDate <= DateTime.Today)
             {
@@ -76,7 +73,6 @@ namespace EvidenceOsob
                 _age++;
             }
 
-            //loop will add one too many years
            _age -= 1;
 
             NewGender = gender;
