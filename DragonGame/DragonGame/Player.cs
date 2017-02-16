@@ -30,6 +30,7 @@ namespace DragonGame
         private int _mana;
         private int _won;
         private int _cleared_locations;
+        private string _error;
 
         public Player(string Gender, string Role)
         {
@@ -219,6 +220,19 @@ namespace DragonGame
             else if (XP >= 1200) { _level = 7; }
 
             return _level;
+        }
+
+        public int Advanced_Armory(int Armor)
+        {
+            if(Armor <= 0)
+            {
+                return 0;
+            }else
+            {
+                _armor += Armor;
+                return _armor;
+            }
+
         }
 
         public int Won { get { return _won; } set { _won = value; } }

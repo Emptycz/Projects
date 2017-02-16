@@ -24,6 +24,7 @@ namespace DragonGame
     {
         Monster monster = new Monster("");
         Player player = new Player("", "");
+        Inventory additional_stats = new Inventory();
         public string select_gender;
         public string choose_role;
         public bool confirmed;
@@ -630,6 +631,12 @@ namespace DragonGame
             ImageSource enSource = new BitmapImage(new Uri(monster.Url));
             ImageBehavior.SetAnimatedSource(Monster, enSource);
 
+            //Zkontrolování armoru a výbavy samotného hráče
+            int additional_Armor = 0;
+            //int additioanl_body = additional_stats.ActiveBodyItem();
+            player.Advanced_Armory(additional_Armor); //Domyslet propojení inventáře (aktivní výbavy!) --------------------- !!!!!!
+
+            
             //Bojový systém
             EnemyHP.Maximum = monster.HP;
             EnemyHP.Value = monster.HP;

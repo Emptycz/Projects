@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DragonGame.Player">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgIAUAAIAAAAQACAAAAAhRAAQgBAAAABESABOAAAAAA=</HashCode>
+      <HashCode>AgIAVIBIAAAAQACAAAAAhRAAQgBQAAABESABOAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DragonGame.LootDevil">
-    <Position X="8.25" Y="4.75" Width="1.5" />
+    <Position X="16.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>LootDevil.cs</FileName>
@@ -16,7 +16,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.LootHunter">
-    <Position X="6.5" Y="4.75" Width="1.5" />
+    <Position X="14.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAQAAAAQAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LootHunter.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.LootMage">
-    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Position X="14.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAkAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LootMage.cs</FileName>
@@ -32,7 +32,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.LootWarrior">
-    <Position X="8.25" Y="2.5" Width="1.5" />
+    <Position X="16.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>LootWarrior.cs</FileName>
@@ -40,14 +40,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.Loot">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgIAAAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAEAAAEAA=</HashCode>
       <FileName>Loot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DragonGame.BasicAttackMonster">
-    <Position X="1.5" Y="9" Width="1.5" />
+    <Position X="10.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BasicAttackMonster.cs</FileName>
@@ -55,7 +55,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.SpecialAttackMonster">
-    <Position X="3" Y="9" Width="1.5" />
+    <Position X="12.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpecialAttackMonster.cs</FileName>
@@ -63,7 +63,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.SpecialPlayerAttack">
-    <Position X="6.25" Y="9" Width="1.5" />
+    <Position X="4.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpecialPlayerAttack.cs</FileName>
@@ -71,7 +71,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.StrongerPlayerAttack">
-    <Position X="7.75" Y="9" Width="1.5" />
+    <Position X="7.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StrongerPlayerAttack.cs</FileName>
@@ -79,32 +79,84 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DragonGame.BasicPlayerAttack">
-    <Position X="4.75" Y="9" Width="1.5" />
+    <Position X="6" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BasicPlayerAttack.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="DragonGame.Reach">
+    <Position X="10.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQADAAAEAQAAAAAAAAAAAQgQAAAAAGAAACAAAAAA=</HashCode>
+      <FileName>Reach.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DragonGame.Rift">
+    <Position X="12.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQADAAAAAQAAAAAAAAAAAQgQAAABAGAAACAAAAAA=</HashCode>
+      <FileName>Rift.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DragonGame.Monster">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACYADAAAEAQAAAAAAAAAQIQgQAAABAGCAACAAAAAA=</HashCode>
+      <FileName>Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DragonGame.Inventory">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DragonGame.InventArmor">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventArmor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="DragonGame.ILoot">
-    <Position X="7.25" Y="1" Width="1.5" />
+    <Position X="15.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ILoot.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="DragonGame.IAttackMonster">
-    <Position X="2.25" Y="7" Width="1.5" />
+    <Position X="11.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IAttackMonster.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="DragonGame.IPlayerAttack">
-    <Position X="6.25" Y="7" Width="1.5" />
+    <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPlayerAttack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DragonGame.ILocation" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILocation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DragonGame.IInvent">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInvent.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
